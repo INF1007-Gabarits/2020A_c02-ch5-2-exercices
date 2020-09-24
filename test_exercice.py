@@ -21,7 +21,7 @@ class TestExercice(unittest.TestCase):
 		expected = [
 			3,
 			3,
-			2,
+			3,
 			2,
 			2,
 			3
@@ -38,7 +38,7 @@ class TestExercice(unittest.TestCase):
 			"a aa-aa \t aa9  "
 		]
 		expected = [
-			[0, 1, 1, 0, 1]
+			[0, 1, 0, 1, 1]
 		]
 		output = [exercice.get_word_length_histogram(v) for v in values]
 

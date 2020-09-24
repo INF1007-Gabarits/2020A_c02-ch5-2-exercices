@@ -4,7 +4,7 @@
 import math
 
 def get_num_letters(text):
-	return len([None for chr in text if chr.isalpha()])
+	return len([None for chr in text if chr.isalnum()])
 
 def get_word_length_histogram(text):
 	histogram = [0]
@@ -16,8 +16,10 @@ def get_word_length_histogram(text):
 	return histogram
 
 def format_histogram(histogram):
+	ROW_CHAR = "*"
+
 	number_alignment = len(str(len(histogram) - 1))
-	result = "\n".join([f"{i+1 : >{number_alignment}} {'*' * elem}" for i, elem in enumerate(histogram[1:])])
+	result = "\n".join([f"{i+1 : >{number_alignment}} {ROW_CHAR * elem}" for i, elem in enumerate(histogram[1:])])
 	return result
 
 def format_horizontal_histogram(histogram):
@@ -35,7 +37,8 @@ def format_horizontal_histogram(histogram):
 
 
 if __name__ == "__main__":
-	spam = get_word_length_histogram("Stop right there criminal scum! shouted the guard confidently.")
-	print(spam, "\n")
-	print(format_histogram(spam), "\n")
-	print(format_horizontal_histogram(spam))
+	spam = "Stop right there criminal scum! shouted the guard confidently."
+	eggs = get_word_length_histogram(spam)
+	print(eggs, "\n")
+	print(format_histogram(eggs), "\n")
+	print(format_horizontal_histogram(eggs))
