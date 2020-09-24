@@ -4,17 +4,17 @@
 
 Avant de commencer. Consulter les instructions à suivre dans [instructions.md](instructions.md)
 
-À moins d'indication contraires, vous devez retourner les résultats des fonctions, pas les afficher directement.
+À moins d'indications contraires, vous devez retourner les résultats des fonctions, pas les afficher directement.
 
-## 1. Nombre de lettre d'un mot
+## 1. Nombre de lettres d'un mot
 ### `get_num_letters`
 
-Compter le nombre de caractères alphanumériques d'une string. Vous ne devez pas compter la ponctuation comme étant une lettre du mot. Donc si un mot contient des caractères de ponctuation (trait d’union, apostrophe, point, virgule, etc.), vous devez y soustraire ceux-ci dans le nombre de lettre du mot. Par exemple, le mot «est?» contient trois lettres et le mot «[reus]» en contient quatre. Utilisez `isalnum` pour déterminer si un caractère est alphanumérique ou non.
+Compter le nombre de caractères alphanumériques d'une string. Vous ne devez pas compter la ponctuation comme étant une lettre du mot. Donc si un mot contient des caractères de ponctuation (trait d’union, apostrophe, point, virgule, etc.), vous devez y soustraire ceux-ci dans le nombre de lettres du mot. Par exemple, le mot «est?» contient trois lettres et le mot «[reus]» en contient quatre. Utilisez `isalnum` pour déterminer si un caractère est alphanumérique ou non.
 
 ## 2. Histogramme de longueurs de mots
 ### `get_word_length_histogram`
 
-Construire un histogramme du nombre de lettres des mots d'un texte. Vous devez retourner une liste où l'élément à un index donné est le nombre de mots ayant un nombre de lettre égal à cet index. Par exemple, l'histogramme `[0, 3, 0, 2]` représente un texte qui a trois mots de une lettre, aucun mots de deux lettres et deux mots de trois lettres. Le premier élément de la liste (le compte de mots à zéro lettre) devrait toujours être égal à 0.
+Construire un histogramme du nombre de lettres des mots d'un texte. Vous devez retourner une liste où l'élément à un index donné est le nombre de mots ayant un nombre de lettres égal à cet index. Par exemple, l'histogramme `[0, 3, 0, 2]` représente un texte qui a trois mots d'une lettre, aucun mots de deux lettres et deux mots de trois lettres. Le premier élément de la liste (le compte de mots à zéro lettre) devrait toujours être égal à 0.
 
 Par exemple :
 ```python
@@ -30,7 +30,7 @@ donne la sortie
 ## 3. Formatage d'un histogramme
 ### `format_histogram`
 
-Construire une version affichable de l'histogramme où chaque élément de l'histogramme (sauf le premier élément nul) est représenté par le nombre d'occurences de la longueur suivie d'une rangée d'étoiles de cette longueur.
+Construire une version affichable de l'histogramme où chaque élément de l'histogramme (sauf le premier élément nul) est représenté par le nombre d'occurrences de la longueur suivie d'une rangée d'étoiles de cette longueur.
 
 Par exemple, si on reprend l'histogramme précédent :
 ```python
@@ -57,7 +57,7 @@ Remarquez qu'on ignore la rangée 0 (qui est toujours égale à 0 et ne représe
 ## 4. Histogramme à colonnes verticales
 ### `format_horizontal_histogram`
 
-Afficher l'histogramme, mais cette fois-ci avec des colonnes verticales (faites avec le caractère `BLOCK_CHAR`) et sans mettre les numéros de colonnes. Il faut aussi mettre une ligne en bas de l'histogramme (caractère `LINE_CHAR`) représentant l'axe et exactement de la même longueur que la largeur de l'histogramme.
+Afficher l'histogramme, mais avec des colonnes verticales (faites avec le caractère `BLOCK_CHAR`) et sans mettre les numéros de colonnes. Il faut aussi mettre une ligne en bas de l'histogramme (caractère `LINE_CHAR`) représentant l'axe et exactement de la même longueur que la largeur de l'histogramme.
 
 En réutilisant encore le même histogramme :
 ```python
